@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 //settng up to get the static file
 app.use(express.static("public"));
 
-mongoose.set("strictQuery", true);
+mongoose.set("strictQuery", false);
 mongoose.connect(process.env.MONGO_URL);
 
 const itemsSchema = {
