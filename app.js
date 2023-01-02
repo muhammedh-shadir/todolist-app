@@ -17,6 +17,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 //settng up to get the static file
 app.use(express.static("public"));
 
+console.log(process.env.MONGO_URL);
 mongoose.set("strictQuery", false);
 mongoose.connect(process.env.MONGO_URL);
 
